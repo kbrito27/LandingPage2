@@ -32,22 +32,36 @@
          box-sizing: border-box;
     }
 
-    /* Create two equal columns that floats next to each other */
+    /* top column */
     .column {
     float: left;
     width: 50%;
     padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
+    height: 300px; 
     }
-
-    /* Clear floats after the columns */
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    
+    /* bottom column */
+    .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; 
+    }
     .row:after {
     content: "";
     display: table;
     clear: both;
     }
 
-
+    /* content inside column */
+    p.description1 {
+    font-size: 25px;
+    }
 
     
     
@@ -56,16 +70,6 @@
 </head>
 
 <body>
-    
-        <!--A nav bar with 3 buttons and a search bar-->
-        <nav>
-            <ul>
-                 <li><span>Home</span></li>
-                 <li>Critics</li>
-                 <li>>Top Picks</li>
-             
-            </ul>
-        </nav>
        
         <h1>LCS</h1>
         <h2 class= "center">The Best of The Best</h2>
@@ -75,15 +79,30 @@
         <hr class="solid">
 
     
+        <!-- 4 columsn one with video one with image and both with text-->
         <div class="row">
-            <div class="column" style="background-color:#aaa;">
-              <h2>Column 1</h2>
-              <p>Some text..</p>
+            <div class="column">
+              <iframe width="420" height="200"
+               src="https://www.youtube.com/embed/rDzvRzj7Uiw">
+              </iframe>
+              <p>Watch this video to see your potential future.</p>
             </div>
-            <div class="column" style="background-color:#bbb;">
-              <h2>Column 2</h2>
-              <p>Some text..</p>
+            <div class="column">
+              <h2>What is Year Up?</h2>
+              <p class = "description1">Year Up is a non-profit career track program that offers a one-year, intensive training that provides young adults with a combination of hands-on skills development, coursework eligible for college credit, and internships at top companies.
+              </p>
             </div>
           </div>
-          <h1>hello</h1>
+        <!--2nd Row-->
+          <div class="row">
+            <div class="column">
+              <h2>The Oppurtunity Divide</h2>
+              <p>America’s workforce has a problem: there’s a surplus of middle-level jobs sitting vacant, while there’s a sea of untapped talent. This gap is known as the opportunity divide, where social and educational forces limit access to economic opportunity for large sections of the population. The Fourth Industrial Revolution, with technology rapidly changing the systems connecting us to one another while providing unprecedented access to data and information, offers businesses a unique chance to close that gap. Closing this gap is critical to building a diverse and equitable workforce that is equipped to solve the challenges ahead and tap into new sources of intellect and innovation.</p>
+            </div>
+            <div class="column">
+              <img src = "divide.jpg" alt = "oppurtunity divide" 
+              width="450" height="280"
+              
+            </div>
+          </div>
 </body>
